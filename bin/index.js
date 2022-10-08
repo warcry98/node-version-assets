@@ -20,7 +20,8 @@ var assets = program.assets && program.assets.split(',');
 var grepFiles = program.grepFiles && program.grepFiles.split(',');
 
 if (!assets || !assets.length) {
-  throw new Error('--assets parameter is required, example: `--assets app.js,app.css`');
+  console.log('--assets parameter is required, example: `--assets app.js,app.css`');
+  process.exit();
 }
 
 var Version = require('../lib/main');
